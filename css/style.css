@@ -1,0 +1,197 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #020103;
+    font-family: monospace;
+    background-image: url(../images/stars-2.png);
+    background-repeat: repeat;
+    animation-name: stars;
+    animation-duration: 80s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+@keyframes stars {
+    0% {
+        background-position: 50% 50%;
+    } 
+    25% {
+        background-position: 25% 75%;
+    }
+    50% {
+        background-position: 75% 50%;
+    }
+    75% {
+        background-position: 25% 25%;
+    }
+    100% {
+        background-position: 50% 50%;
+    }  
+}
+.container{
+    display: flex;
+    width: 100%;
+    gap: 10px;
+    padding: 10px;
+    max-width: 1050px;
+    background-color: #020103;
+    border: #d9d4d0 solid 1px;
+}
+h1 {
+    position: absolute;
+    width: inherit;
+    max-width: inherit;
+    bottom: calc(100vh - 4em);
+    text-align: center;
+    
+}
+.myTitle {
+    color: #d9d4d0;
+    font-size: 28px; 
+    margin-bottom: 8px;
+}
+#myIllustration {
+    background: none;
+    border: none;
+}
+.left {
+    width: 60px;
+}
+.options .option {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.option {
+    color: #d9d4d0;
+    margin: 10px 0 30px 0;
+    border-radius: 25px;
+}
+.option svg path {
+    mix-blend-mode: difference;
+}
+.option:hover {
+    cursor: pointer;
+}
+.selected {
+    background-color: #d9d4d0;
+}
+.tools {
+    padding: 5px;
+}
+svg {
+    margin: 5px;
+}
+svg path {
+    fill: #d9d4d0;
+}
+.btns button {
+    display: flexbox;
+    align-items: center;
+    justify-content: center;
+}
+button:hover {
+    cursor: pointer;
+}
+button {
+    margin: 10px;
+    background: none;
+    color: #d9d4d0;
+    height: 20px;
+    width: 40px;
+    border: #d9d4d0 solid 1px;
+    border-radius: 5px;
+}
+.settings{
+    position: fixed;
+    flex: 1;
+    overflow: hidden;
+    font-size: 12px;
+    left: 100%;
+    width: 200px;
+    height: auto;
+    padding: 15px;
+    background-color:#020103;
+    border: #d9d4d0 solid 1px;
+    color: #d9d4d0;
+    transition: 0.8s;
+}
+.settings .options .option {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+.active .settings{
+    left: calc(100% - 300px);
+}
+.active .container{
+   transform: translateX(-200px);
+}
+label {
+    margin-right: 5px;
+}
+.clr {
+    background: none;
+    border: transparent;
+    height: 25px;
+    width: 25px;
+}
+.clr:hover {
+    cursor: pointer;
+}
+.slider {
+    appearance: none;
+    background: none;
+    height: 1px;
+    border: #d9d4d0 solid 1px;
+    border-radius: 10px;
+}
+.slider::-webkit-slider-thumb {
+    appearance: none;
+    height: 10px;
+    width: 10px;
+    background: #d9d4d0;
+    border: 5px;
+}
+.slider::-webkit-slider-thumb:hover {
+    cursor: pointer;
+}
+input[type='checkbox'] {
+    appearance: none;
+    height: 10px;
+    width: 10px;
+    border: #d9d4d0 solid 1px;
+    border-radius: 5px;
+}
+input[type='checkbox']:hover {
+    cursor: pointer;
+}
+.slctGrd {
+    background-color: #d9d4d0;
+}
+.cvsContainer {
+    border: #d9d4d0 solid 1px;
+    flex: 1;
+    overflow: hidden;
+}
+.cvsContainer #myCanvas {
+    height: 100%;
+    width: 100%;
+}
+.cvsContainer #myCanvas:hover{
+    cursor: crosshair;
+}
+.dottedGrid {
+    background-image: radial-gradient(white, 1px, transparent 0);
+    background-size: 20px 20px;
+    background-position: inherit;
+    background-blend-mode: difference;
+}
+
